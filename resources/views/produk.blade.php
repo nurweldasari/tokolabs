@@ -54,42 +54,39 @@
     <input type="text" class="search-bar" placeholder="Search...">
     <div class="dropdown-group">
       <select class="filter-select">
-        <option>Kategori</option>
-        <option>Elektronik</option>
-        <option>Fashion</option>
-        <option>Kategori</option>
-        <option>Elektronik</option>
-        <option>Fashion</option>
-        <option>Kategori</option>
-        <option>Elektronik</option>
-        <option>Fashion</option>
-        <option>Kategori</option>
-        <option>Elektronik</option>
-        <option>Fashion</option>
-        <option>Kategori</option>
-        <option>Elektronik</option>
-        <option>Fashion</option>
-        <option>Kategori</option>
-        <option>Elektronik</option>
-        <option>Fashion</option>
-        <option>Kategori</option>
-        <option>Elektronik</option>
-        <option>Fashion</option>
-        <option>Kategori</option>
-        <option>Elektronik</option>
-        <option>Fashion</option>
-        <option>Kategori</option>
-        <option>Elektronik</option>
-        <option>Fashion</option>
-        <option value="makeup">Makeup</option>
-        <option value="skincare">Skincare</option>
+        <option disabled selected>Pilih Kategori</option>
+<option value="aksesori_fashion">Aksesori Fashion</option>
+<option value="buku_alat_tulis">Buku & Alat Tulis</option>
+<option value="elektronik">Elektronik</option>
+<option value="fashion_bayi_anak">Fashion Bayi & Anak</option>
+<option value="fashion_muslim">Fashion Muslim</option>
+<option value="fotografi">Fotografi</option>
+<option value="handphone_aksesoris">Handphone & Aksesoris</option>
+<option value="hobi_koleksi">Hobi & Koleksi</option>
+<option value="ibu_bayi">Ibu & Bayi</option>
+<option value="jam_tangan">Jam Tangan</option>
+<option value="kesehatan">Kesehatan</option>
+<option value="komputer_aksesoris">Komputer & Aksesoris</option>
+<option value="makanan_minuman">Makanan & Minuman</option>
+<option value="olahraga_outdoor">Olahraga & Outdoor</option>
+<option value="otomotif">Otomotif</option>
+<option value="pakaian_pria">Pakaian Pria</option>
+<option value="pakaian_wanita">Pakaian Wanita</option>
+<option value="perawatan_tubuh">Perawatan & Kecantikan</option>
+<option value="perlengkapan_rumah">Perlengkapan Rumah</option>
+<option value="sepatu_pria">Sepatu Pria</option>
+<option value="sepatu_wanita">Sepatu Wanita</option>
+<option value="tas_wanita">Tas Wanita</option>
+<option value="tas_pria">Tas Pria</option>
+<option value="perhiasan_aksesoris">Perhiasan & Aksesori</option>
       </select>
       <select class="sort-select">
-        <option>Urutkan</option>
-        <option>Harga Terendah</option>
-        <option>Harga Tertinggi</option>
-        <option>Rating Tertinggi</option>
-        <option>Terbaru</option>
+        <option disabled selected>Urutkan</option>
+        <option value="harga_terendah">Harga Terendah</option>
+        <option value="harga_tertinggi">Harga Tertinggi</option>
+        <option value="rating_tertinggi">Rating Tertinggi</option>
+        <option value="terlaris">Terlaris</option>
+        <option value="terbaru">Terbaru</option>
       </select>
     </div>
     </div>
