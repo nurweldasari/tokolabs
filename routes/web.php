@@ -25,6 +25,11 @@ Route::get('/produk', function () {
     return view('produk');
 });
 
-Route::get('/analitik', function () {
-    return view('analitik');
+Route::get('/schedule', function () {
+    return view('schedule');
 });
+
+Route::get('/ubah_password', function () {
+    return view('ubah_password');
+});
+Route::post('/ubah_password', [AuthController::class, 'updatePassword'])->middleware('auth');

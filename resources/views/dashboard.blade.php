@@ -22,11 +22,9 @@
     </div>
     <ul>
       <li class="dashboard active"><a href="#"><i class="fa-solid fa-gauge-high"></i> <span class="menu-text">Dashboard</span></a></li>
-      <li><a href="akun"><i class="fa-solid fa-user-gear"></i> <span class="menu-text">Manajemen Akun</span></a></li>
-      <li><a href="produk"><i class="fa-solid fa-cloud-arrow-down"></i> <span class="menu-text">Scrapping Produk</span></a></li>
-      <li><a href="analitik"><i class="fa-solid fa-chart-line"></i> <span class="menu-text">Analisis Produk</span></a></li>
-      <li><a href="rekomendasi"><i class="fa-solid fa-star"></i> <span class="menu-text">Rekomendasi Produk</span></a></li>
-      <li><a href="etalase"><i class="fa-solid fa-calendar-days"></i> <span class="menu-text">Etalase live</span></a></li>
+      <li><a href="produk"><i class="fa-solid fa-cart-shopping"></i> <span class="menu-text">Produk</span></a></li>
+      <li><a href="schedule"><i class="fa-solid fa-calendar-days"></i> <span class="menu-text">Scheduler</span></a></li>
+      <li><a href="etalase"><i class="fa-solid fa-user-gear"></i> <span class="menu-text">Manajemen & Etalase</span></a></li>
     </ul>
   </aside>
 
@@ -44,7 +42,7 @@
             <i class="fa-solid fa-chevron-down chevron-icon"></i>
           </div>
           <div class="dropdown-menu" id="dropdownMenu">
-            <a href="#">Ubah Kata Sandi</a>
+            <a href="ubah_password">Ubah Kata Sandi</a>
             <a href="#" onclick="konfirmasiLogout()" class="logout-link">Logout</a>
           </div>
         </div>
