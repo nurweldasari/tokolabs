@@ -41,7 +41,7 @@
             <i class="fa-solid fa-chevron-down chevron-icon"></i>
           </div>
           <div class="dropdown-menu" id="dropdownMenu">
-            <a href="ubah_password">Ubah Kata Sandi</a>
+            <a href="akun">Pengaturan Akun</a>
             <a href="#" onclick="konfirmasiLogout()" class="logout-link">Logout</a>
           </div>
         </div>

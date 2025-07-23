@@ -17,7 +17,7 @@ Route::get('/dashboard', function () {
 })->middleware('auth');
 
 
-Route::get('akun', function () {
+Route::get('/akun', function () {
     return view('akun');
 });
 
@@ -29,7 +29,4 @@ Route::get('/schedule', function () {
     return view('schedule');
 });
 
-Route::get('/ubah_password', function () {
-    return view('ubah_password');
-});
 Route::post('/ubah_password', [AuthController::class, 'updatePassword'])->middleware('auth');
