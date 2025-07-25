@@ -29,25 +29,40 @@
   </aside>
 
   <!-- Main Content -->
-  <div class="main-content" id="mainContent">
-    <div class="navbar">
-      <div class="nav-title">Dashboard</div>
-      <div class="user-area">
-        <div class="greeting">Hi, Welda!</div>
-        <div class="avatar">
-          <img src="/assets/img/profil.jpg" alt="Profil" />
+<div class="main-content" id="mainContent">
+  <div class="navbar">
+    <div class="nav-title">Dashboard</div>
+
+    <div class="user-area">
+      <!-- Notifikasi -->
+      <div class="notification">
+        <i class="fa-solid fa-bell"></i>
+        <span class="notif-badge"></span>
+      </div>
+
+      <!-- Hi, Welda dan avatar -->
+      <div class="greeting">Hi, Welda!</div>
+      <div class="avatar">
+        <img src="/assets/img/profil.jpg" alt="Profil" />
+      </div>
+
+      <!-- Dropdown -->
+      <div class="dropdown">
+        <div class="dropdown-toggle" onclick="toggleDropdown()">
+          <i class="fa-solid fa-chevron-down chevron-icon"></i>
         </div>
-        <div class="dropdown">
-          <div class="dropdown-toggle" onclick="toggleDropdown()">
-            <i class="fa-solid fa-chevron-down chevron-icon"></i>
-          </div>
-          <div class="dropdown-menu" id="dropdownMenu">
-            <a href="akun">Pengaturan Akun</a>
-            <a href="#" onclick="konfirmasiLogout()" class="logout-link">Logout</a>
-          </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <a href="akun">
+            <i class="fa-solid fa-gear"></i> Pengaturan Akun
+          </a>
+          <a href="#" onclick="konfirmasiLogout()" class="logout-link">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+          </a>
         </div>
       </div>
     </div>
+  </div>
+
 
     <!-- Dashboard -->
     <div class="dashboard">

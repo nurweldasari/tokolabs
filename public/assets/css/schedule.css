@@ -1,4 +1,4 @@
-    :root {
+:root {
   --primary: #4f46e5;
   --bg: #f5f7fa;
   --text-dark: #1f2937;
@@ -15,7 +15,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background: var(--bg);
-  padding-top: 70px; 
 }
 
 .container {
@@ -233,16 +232,16 @@ body {
 
 .dropdown-menu { 
   display: none;
-  position: absolute;
-  top: 50px;
-  right: 0;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-  padding: 10px;
-  min-width: 150px;
-  z-index: 1000;
-  font-size: 13px;
+position: absolute;
+top: 50px;
+right: 0;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+padding: 10px;
+width: 160px; /* Lebih panjang */
+z-index: 1000;
+font-size: 13px;
 }
 
 .dropdown-menu a,
@@ -262,104 +261,174 @@ body {
   background-color: #f0f0f0;
 }
 
-/* Scheduler Table */
-.container-scheduler {
-  max-width: 900px;
-  margin: 30px auto;
+.schedule-wrapper {
+  max-width: 500px;
   background: #fff;
-  padding: 25px 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 185px auto 30px; /* 120px dari atas agar tidak mepet navbar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.container-scheduler h2 {
-  margin-bottom: 0px;
-  font-size: 24px;
+
+.schedule-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+.purple {
+  background-color: #5f63f2;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.schedule-content {
+  flex: 1;
+}
+
+.label {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.time {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 2px 0 0;
   color: #333;
 }
 
-.form-scheduler {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.form-scheduler label {
-  flex: 1 1 100px;
-  font-weight: bold;
-  color: #555;
-}
-
-.form-scheduler select,
-.form-scheduler input[type="time"] {
-  flex: 1 1 200px;
-  padding: 8px 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-.btn-simpan {
-  background-color: #1e88e5;
-  color: #fff;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 6px;
+.edit-icon {
+  color: #5f63f2;
+  font-size: 16px;
   cursor: pointer;
+}
+
+.btn-run {
+  margin-top: 18px;
+  width: 100%;
+  background-color: #5f63f2;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  font-size: 15px;
   font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
   transition: background 0.3s;
 }
 
-.btn-simpan:hover {
-  background-color: #1565c0;
+.btn-run:disabled {
+  opacity: 0.8;
+  background-color: #4e52d0;
+  cursor: not-allowed;
 }
 
-.jadwal-aktif h3 {
-  margin-bottom: 15px;
-  color: #333;
+.btn-run:hover {
+  background-color: #4549d3;
 }
 
-table {
+/* Modal */
+/* Overlay tetap di tengah layar, tidak menggelapkan sidebar */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 999;
+  pointer-events: all;
+}
+
+/* Kontainer modal bisa digeser */
+.modal-box {
+  position: absolute; /* agar bisa digeser secara bebas */
+  top: 50%;
+  left: 60%; /* GESER KE KANAN dengan ubah nilai ini */
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 24px 24px 20px;
+  border-radius: 14px;
   width: 100%;
-  border-collapse: collapse;
-  background-color: #fff;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-table thead {
-  background-color: #1e88e5;
-  color: #fff;
+/* Status berjalan hijau */
+.status-berjalan {
+  color: #4caf50;       /* Hanya teks hijau */
+  font-size: 13px;
+  font-weight: 600;
 }
 
-table th,
-table td {
-  text-align: center;
-  padding: 12px;
-  border-bottom: 1px solid #ddd;
-}
 
-.status.aktif {
-  background-color: #43a047;
-  color: white;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 12px;
-}
-
-.btn-edit,
-.btn-hapus {
-  background: none;
-  border: none;
-  cursor: pointer;
+/* Isi Modal */
+.modal-box h3 {
+  margin-top: 0;
   font-size: 16px;
-  padding: 5px;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
-.btn-edit {
-  color: #0288d1;
+.modal-box label {
+  display: block;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
 }
 
-.btn-hapus {
-  color: #e53935;
+.modal-box input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-cancel {
+  padding: 8px 14px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-save {
+  padding: 8px 14px;
+  background-color: #5f63f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
 }

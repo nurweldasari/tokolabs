@@ -27,26 +27,31 @@
     </ul>
   </aside>
 
-  <!-- Main Content -->
-  <div class="main-content" id="mainContent">
-    <div class="navbar">
-      <div class="nav-title">Pengaturan Akun</div>
-      <div class="user-area">
-        <div class="greetingg">Hi, Welda!</div>
-        <div class="avatar">
-          <img src="/assets/img/profil.jpg" alt="Profil" />
+    <!-- Main Content -->
+<div class="main-content" id="mainContent">
+  <div class="navbar">
+    <div class="nav-title">Dashboard</div>
+
+    <div class="user-area">
+      <!-- Hi, Welda dan avatar -->
+      <div class="greetingg">Hi, Welda!</div>
+      <div class="avatar">
+        <img src="/assets/img/profil.jpg" alt="Profil" />
+      </div>
+
+      <!-- Dropdown -->
+      <div class="dropdown">
+        <div class="dropdown-toggle" onclick="toggleDropdown()">
+          <i class="fa-solid fa-chevron-down chevron-icon"></i>
         </div>
-        <div class="dropdown">
-          <div class="dropdown-toggle" onclick="toggleDropdown()">
-            <i class="fa-solid fa-chevron-down chevron-icon"></i>
-          </div>
-          <div class="dropdown-menu" id="dropdownMenu">
-            <a href="#">Ubah Kata Sandi</a>
-            <a href="#" onclick="konfirmasiLogout()" class="logout-link">Logout</a>
-          </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <a href="#" onclick="konfirmasiLogout()" class="logout-link">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+          </a>
         </div>
       </div>
     </div>
+  </div>
 
 <div class="tab-wrapper">
   <div class="tab-card">
@@ -102,6 +107,35 @@
     </div>
   </div>
 </div>
+<div id="popup" class="popup-notification">
+  <i class="fas fa-check-circle"></i>
+  <span id="popup-message">Berhasil!</span>
+</div>
+<script>
+  function showPopup(message) {
+    const popup = document.getElementById('popup');
+    const popupMessage = document.getElementById('popup-message');
+    popupMessage.textContent = message;
+    popup.classList.add('show');
+
+    setTimeout(() => {
+      popup.classList.remove('show');
+    }, 3000);
+  }
+
+  // Event Simpan Profil
+  document.querySelector('.profile-info-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    showPopup('Profil berhasil diperbarui!');
+  });
+
+  // Event Simpan Password
+  document.querySelector('#password form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    showPopup('Password berhasil diganti!');
+  });
+</script>
+
 
 <script>
   function showTab(id, el) {

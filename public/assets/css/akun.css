@@ -1,4 +1,4 @@
-    :root {
+:root {
   --primary: #4f46e5;
   --bg: #f5f7fa;
   --text-dark: #1f2937;
@@ -232,16 +232,16 @@ body {
 
 .dropdown-menu { 
   display: none;
-  position: absolute;
-  top: 50px;
-  right: 0;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-  padding: 10px;
-  min-width: 150px;
-  z-index: 1000;
-  font-size: 13px;
+position: absolute;
+top: 50px;
+right: 0;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+padding: 10px;
+width: 160px; /* Lebih panjang */
+z-index: 1000;
+font-size: 13px;
 }
 
 .dropdown-menu a,
@@ -262,12 +262,14 @@ body {
 }
 
     /* === FORM SECTION === */
-   /* Navigasi Tab */
-/* WRAPPER & BACKGROUND */
-.tab-wrapper {
-  padding: 100px 20px 80px;
-  background-color: #f5f6ff;
+ .tab-wrapper {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 50px auto 10px; /* 100px dari atas (navbar), auto untuk tengahkan, 10px ke bawah */
+  border-radius: 12px;
 }
+
+
 
 /* TAB NAVIGATION */
 .tab-navigation {
@@ -323,7 +325,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 80px;
+  gap: 60px;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -428,4 +430,32 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.popup-notification {
+  position: fixed;
+  top: 60px;
+  right: 380px; /* Ubah angka ini untuk lebih ke kiri atau ke kanan */
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.popup-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.popup-notification i {
+  font-size: 18px; /* Icon tidak terlalu besar */
 }
