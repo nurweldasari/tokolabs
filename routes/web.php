@@ -29,4 +29,12 @@ Route::get('/schedule', function () {
     return view('schedule');
 });
 
+Route::get('/etalase', function () {
+    return view('etalase');
+});
+
+Route::get('/detail', function () {
+    return view('detail');
+});
+
 Route::post('/ubah_password', [AuthController::class, 'updatePassword'])->middleware('auth');

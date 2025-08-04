@@ -102,7 +102,9 @@
 <div class="pagination-wrapper" id="paginationTop"></div>
 <div class="produk-container" id="produkContainer">
   <div class="produk-item">
-    <img src="/assets/img/implora.png" alt="Produk 1" class="produk-img" />
+    <a href="/detail">
+  <img src="/assets/img/implora.png" alt="Produk 1" class="produk-img" />
+</a>
     <div class="produk-info">
       <div class="produk-header">
         <span class="produk-label">Mall ORI</span>

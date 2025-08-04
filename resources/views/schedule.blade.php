@@ -2,15 +2,15 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard TokoLabs</title>
+  <title>Scheduler - TokoLabs</title>
   <link rel="stylesheet" href="{{ asset('assets/css/schedule.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-<div class="container">
-  <!-- Sidebar -->
+  <div class="container">
+    <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
+  <div class="menu-container">
     <div class="logo">
       <div class="brand">
         <i class="fa-solid fa-shop"></i>
@@ -20,62 +20,43 @@
         <i class="fa-solid fa-bars"></i>
       </div>
     </div>
-     <ul>
+    <ul>
       <li><a href="dashboard"><i class="fa-solid fa-gauge-high"></i> <span class="menu-text">Dashboard</span></a></li>
-      <li><a href="produk"><i class="fa-solid fa-cart-shopping"></i> <span class="menu-text">Produk</span></a></li>
+      <li><a href="etalase"><i class="fa-solid fa-cart-shopping"></i> <span class="menu-text">Rekomendasi Produk</span></a></li>
       <li class="schedule active"><a href="#"><i class="fa-solid fa-calendar-days"></i> <span class="menu-text">Scheduler</span></a></li>
-      <li><a href="etalase"><i class="fa-solid fa-user-gear"></i> <span class="menu-text">Manajemen & Etalase</span></a></li>
+      <li><a href="akun"><i class="fa-solid fa-gear"></i> <span class="menu-text">Pengaturan Akun</span></a></li>
     </ul>
-  </aside>
+  </div>
+
+  <div class="logout-wrapper">
+    <a href="#" onclick="konfirmasiLogout()" class="logout-btn">
+  <i class="fa-solid fa-right-from-bracket"></i>
+  <span class="logout-text">Keluar</span>
+</a>
+  </div>
+</aside>
 
   <!-- Main Content -->
-<div class="main-content" id="mainContent">
+  <div class="main-content" id="mainContent">
   <div class="navbar">
-    <div class="nav-title">Dashboard</div>
+    <div class="nav-title">Scheduler</div>
 
     <div class="user-area">
-
-      <!-- Hi, Welda dan avatar -->
-      <div class="greeting">Hi, Welda!</div>
+      <!-- Hi, Welda dan avatar saja -->
+      <div class="greetingg">Hi, Welda!</div>
       <div class="avatar">
         <img src="/assets/img/profil.jpg" alt="Profil" />
       </div>
-
-      <!-- Dropdown -->
-      <div class="dropdown">
-        <div class="dropdown-toggle" onclick="toggleDropdown()">
-          <i class="fa-solid fa-chevron-down chevron-icon"></i>
-        </div>
-        <div class="dropdown-menu" id="dropdownMenu">
-          <a href="akun">
-            <i class="fa-solid fa-gear"></i> Pengaturan Akun
-          </a>
-          <a href="#" onclick="konfirmasiLogout()" class="logout-link">
-            <i class="fa-solid fa-right-from-bracket"></i> Logout
-          </a>
-        </div>
-      </div>
     </div>
   </div>
+
 <div class="schedule-wrapper">
   <!-- Box Jadwal -->
-  <div class="schedule-box">
-    <div class="icon-box purple">
-      <i class="fa-solid fa-clock"></i>
-    </div>
-    <div class="schedule-content">
-      <p class="label">Jadwal Scraping</p>
-      <p class="time" id="jadwal-scraping">Setiap Hari Pukul 09:00</p>
-    </div>
-    <div class="edit-icon" onclick="openModal()">
-      <i class="fa-solid fa-pen-to-square"></i>
-    </div>
-  </div>
 
   <!-- Box Terakhir Scraping -->
   <div class="schedule-box">
     <div class="icon-box green">
-      <i class="fa-solid fa-rotate"></i>
+      <i class="fa-solid fa-clock-rotate-left"></i>
     </div>
     <div class="schedule-content">
       <p class="label">Terakhir Scraping</p>
@@ -89,36 +70,8 @@
   </button>
 </div>
 
-<!-- Modal -->
-<div class="modal-overlay" id="modal-overlay">
-  <div class="modal-box">
-    <h3>Atur Jadwal Scraping</h3>
-    <label for="input-jam">Waktu Scraping Harian</label>
-    <input type="time" id="input-jam" value="09:00" />
-    <div class="modal-buttons">
-      <button onclick="closeModal()" class="btn-cancel">Batal</button>
-      <button onclick="simpanJadwal()" class="btn-save">Simpan</button>
-    </div>
-  </div>
-</div>
 <script>
-  const modal = document.getElementById('modal-overlay');
-  const jadwalText = document.getElementById('jadwal-scraping');
-
-  function openModal() {
-    modal.style.display = 'flex';
-  }
-
-  function closeModal() {
-    modal.style.display = 'none';
-  }
-
-  function simpanJadwal() {
-    const jam = document.getElementById('input-jam').value;
-    jadwalText.textContent = `Setiap Hari Pukul ${jam}`;
-    closeModal();
-  }
-
+  
   document.getElementById('run-btn').addEventListener('click', function () {
   const btn = this;
   const lastScraping = document.getElementById('last-scraping');

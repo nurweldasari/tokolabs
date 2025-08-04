@@ -33,6 +33,10 @@ body {
   font-size: 13px;
   transition: width 0.3s ease;
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .sidebar.collapsed {
@@ -118,25 +122,37 @@ body {
   font-size: 15px;
 }
 
-.main-content {
-  margin-left: 240px;
-  width: calc(100% - 240px);
-  transition: margin-left 0.3s ease;
-}
-
-.main-content.expanded {
-  margin-left: 70px;
-  width: calc(100% - 70px);
-}
-
-.sidebar.collapsed .logo {
+.logout-wrapper {
+  display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
-.sidebar.collapsed .brand {
-  display: none;
+.logout-btn {
+  width: 180px;
+  padding: 10px 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff2e2e;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
+.logout-btn i {
+  margin-right: 6px;
+}
+
+.logout-btn:hover {
+  background-color: #cc1f1f;
+}
+
+.sidebar.collapsed .logout-text,
+.sidebar.collapsed .brand,
 .sidebar.collapsed .menu-text {
   display: none;
 }
@@ -153,18 +169,6 @@ body {
 .navbar {
   left: 240px;
   transition: left 0.3s ease;
-}
-
-.sidebar.collapsed ~ .main-content .navbar {
-  left: 70px;
-}
-
-.sidebar.collapsed + .main-content .navbar {
-  left: 70px;
-}
-
-/* Navbar */
-.navbar {
   height: 60px;
   background: #ffffff;
   display: flex;
@@ -173,14 +177,25 @@ body {
   padding: 0 30px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   position: fixed;
-  left: 240px;
   right: 0;
   top: 0;
   z-index: 999;
-  transition: left 0.3s ease;
 }
 
-.main-content.expanded ~ .navbar {
+.main-content {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+}
+
+.main-content.expanded ~ .navbar,
+.sidebar.collapsed ~ .main-content .navbar,
+.sidebar.collapsed + .main-content .navbar {
   left: 70px;
 }
 
@@ -201,7 +216,6 @@ body {
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
-  position: relative;
 }
 
 .avatar img {
@@ -210,56 +224,12 @@ body {
   object-fit: cover;
 }
 
-/* dropdown sandi dan logout */
-.dropdown {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.dropdown-toggle {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-}
-
-.chevron-icon {
-  font-size: 12px;
+.greetingg {
+  font-size: 14px;
   color: #333;
+  font-weight: 500;
 }
 
-
-.dropdown-menu { 
-  display: none;
-position: absolute;
-top: 50px;
-right: 0;
-background-color: #fff;
-border-radius: 5px;
-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-padding: 10px;
-width: 160px; /* Lebih panjang */
-z-index: 1000;
-font-size: 13px;
-}
-
-.dropdown-menu a,
-.dropdown-menu button {
-  display: block;
-  padding: 8px;
-  text-decoration: none;
-  color: #333;
-  background: none;
-  border: none;
-  text-align: left;
-  width: 100%;
-}
-
-.dropdown-menu a:hover,
-.dropdown-menu button:hover {
-  background-color: #f0f0f0;
-}
 
 .schedule-wrapper {
   max-width: 500px;
@@ -293,14 +263,13 @@ font-size: 13px;
   margin-right: 12px;
 }
 
-.purple {
-  background-color: #5f63f2;
-}
-
 .green {
-  background-color: #4caf50;
+  background-color: #00800033; 
 }
 
+.fa-clock-rotate-left {
+  color: #008000;
+}
 .schedule-content {
   flex: 1;
 }
@@ -309,19 +278,6 @@ font-size: 13px;
   font-size: 14px;
   color: #666;
   margin: 0;
-}
-
-.time {
-  font-size: 15px;
-  font-weight: bold;
-  margin: 2px 0 0;
-  color: #333;
-}
-
-.edit-icon {
-  color: #5f63f2;
-  font-size: 16px;
-  cursor: pointer;
 }
 
 .btn-run {
@@ -348,87 +304,9 @@ font-size: 13px;
   background-color: #4549d3;
 }
 
-/* Modal */
-/* Overlay tetap di tengah layar, tidak menggelapkan sidebar */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.4);
-  display: none;
-  z-index: 999;
-  pointer-events: all;
-}
-
-/* Kontainer modal bisa digeser */
-.modal-box {
-  position: absolute; /* agar bisa digeser secara bebas */
-  top: 50%;
-  left: 60%; /* GESER KE KANAN dengan ubah nilai ini */
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 24px 24px 20px;
-  border-radius: 14px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
 /* Status berjalan hijau */
 .status-berjalan {
   color: #4caf50;       /* Hanya teks hijau */
   font-size: 13px;
   font-weight: 600;
-}
-
-
-/* Isi Modal */
-.modal-box h3 {
-  margin-top: 0;
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-
-.modal-box label {
-  display: block;
-  font-weight: 600;
-  color: #444;
-  margin-bottom: 6px;
-}
-
-.modal-box input[type="time"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  font-size: 14px;
-}
-
-.modal-buttons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
-.btn-cancel {
-  padding: 8px 14px;
-  background-color: #e0e0e0;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.btn-save {
-  padding: 8px 14px;
-  background-color: #5f63f2;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
 }

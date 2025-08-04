@@ -1,0 +1,471 @@
+:root {
+  --primary: #4f46e5;
+  --bg: #f5f7fa;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 240px;
+  background: var(--white);
+  height: 100vh;
+  padding: 20px 10px 10px;
+  border-right: 1px solid #e5e7eb;
+  position: fixed;
+  left: 0;
+  top: 0;
+  font-size: 13px;
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar.collapsed .brand span,
+.sidebar.collapsed ul li span {
+  display: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  padding: 0 10px;
+}
+
+.logo .brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+}
+
+.logo .brand i,
+.logo .brand span {
+  color: var(--primary);
+}
+
+.logo .bars-wrapper {
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logo .bars-wrapper i {
+  color: #000;
+  font-size: 16px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+  color: var(--text-dark);
+  font-size: 13px;
+}
+
+.sidebar li i {
+  margin-right: 10px;
+  font-size: 14px;
+  width: 20px;
+  text-align: center;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.sidebar li a {
+  text-decoration: none !important;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 15px;
+}
+
+.main-content {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+}
+
+.sidebar.collapsed .logo {
+  justify-content: center;
+}
+
+.sidebar.collapsed .brand {
+  display: none;
+}
+
+.sidebar.collapsed .menu-text {
+  display: none;
+}
+
+.sidebar .logo .bars-wrapper {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.sidebar.collapsed .logo .bars-wrapper {
+  margin: 0 auto;
+}
+
+.navbar {
+  left: 240px;
+  transition: left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .main-content .navbar {
+  left: 70px;
+}
+
+.sidebar.collapsed + .main-content .navbar {
+  left: 70px;
+}
+
+/* Navbar */
+.navbar {
+  height: 60px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  left: 240px;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  transition: left 0.3s ease;
+}
+
+.main-content.expanded ~ .navbar {
+  left: 70px;
+}
+
+.dashboard {
+  padding: 80px 30px 30px 30px;
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* dropdown sandi dan logout */
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.chevron-icon {
+  font-size: 12px;
+  color: #333;
+}
+
+
+.dropdown-menu { 
+  display: none;
+position: absolute;
+top: 50px;
+right: 0;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+padding: 10px;
+width: 160px; /* Lebih panjang */
+z-index: 1000;
+font-size: 13px;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: #333;
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
+}
+
+.detail-wrapper {
+  max-width: 960px;
+  margin: 70px auto 40px;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* === Kartu Produk === */
+.produk-card {
+  display: flex;
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 24px;
+  gap: 20px;
+  position: relative;
+}
+
+.produk-img {
+  width: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.produk-info {
+  flex: 1;
+  position: relative;
+  padding-right: 100px; /* Tambah ruang untuk badge di kanan */
+}
+
+.produk-nama {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  color: #222;
+}
+
+.live-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ffa8a8;
+  color: rgb(182, 0, 0);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: rgb(177, 0, 0);
+  border-radius: 50%;
+}
+
+/* === Umur Produk === */
+.umur-produk {
+  background-color: #e1e6ff;
+  padding: 16px 20px;
+  border-radius: 14px;
+  max-width: 480px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.umur-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.umur-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #d2d9ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4f46e5;
+  font-size: 18px;
+}
+
+.umur-content h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: #1e1eaf;
+  font-weight: 600;
+}
+
+.umur-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #000;
+}
+
+.tanggal-upload {
+  font-weight: bold;
+  color: #1e1eaf;
+  margin-left: 4px;
+}
+
+.umur-label {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  background-color: #c1caff;
+  color: #1c14ba;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* === Feedback Section === */
+.feedback-section {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-circle i {
+  color: #304ffe;
+  font-size: 18px;
+}
+
+.feedback-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.updated {
+  font-size: 13px;
+  color: #777;
+}
+
+/* === Feedback Columns === */
+.feedback-columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.positif, .negatif {
+  flex: 1;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.positif {
+  background: #e6f6eb;
+  color: #1b5e20;
+}
+
+.negatif {
+  background: #fdecea;
+  color: #c62828;
+}
+
+.positif h5, .negatif h5 {
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.positif ul, .negatif ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.positif li, .negatif li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.positif li i, .negatif li i {
+  font-size: 13px;
+}

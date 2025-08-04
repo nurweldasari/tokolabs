@@ -2,78 +2,145 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Data Produk - TokoLabs</title>
-  <link rel="stylesheet" href="{{ asset('assets/css/ubah_password.css') }}">
+  <title>Rekomendasi Produk - TokoLabs</title>
+  <link rel="stylesheet" href="{{ asset('assets/css/etalase.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <div class="container">
     <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
+  <div class="menu-container">
     <div class="logo">
-  <div class="brand">
-    <i class="fa-solid fa-shop"></i>
-    <span class="brand-text">TokoLabs</span>
-  </div>
-  <div class="bars-wrapper" id="toggleSidebar">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-</div>
+      <div class="brand">
+        <i class="fa-solid fa-shop"></i>
+        <span class="brand-text">TokoLabs</span>
+      </div>
+      <div class="bars-wrapper" id="toggleSidebar">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
     <ul>
       <li><a href="dashboard"><i class="fa-solid fa-gauge-high"></i> <span class="menu-text">Dashboard</span></a></li>
-      <li><a href="produk"><i class="fa-solid fa-cart-shopping"></i> <span class="menu-text">Produk</span></a></li>
+      <li class="etalase active"><a href="#"><i class="fa-solid fa-cart-shopping"></i> <span class="menu-text">Rekomendasi Produk</span></a></li>
       <li><a href="schedule"><i class="fa-solid fa-calendar-days"></i> <span class="menu-text">Scheduler</span></a></li>
-      
-      <li class="produk active"><a href="#"><i class="fa-solid fa-cart-shopping"></i> <span class="menu-text">Produk</span></a></li>
-      <li><a href="etalase"><i class="fa-solid fa-user-gear"></i> <span class="menu-text">Manajemen & Etalase</span></a></li>
+      <li><a href="akun"><i class="fa-solid fa-gear"></i> <span class="menu-text">Pengaturan Akun</span></a></li>
     </ul>
-  </aside>
+  </div>
+
+  <div class="logout-wrapper">
+    <a href="#" onclick="konfirmasiLogout()" class="logout-btn">
+  <i class="fa-solid fa-right-from-bracket"></i>
+  <span class="logout-text">Keluar</span>
+</a>
+  </div>
+</aside>
 
   <!-- Main Content -->
   <div class="main-content" id="mainContent">
-    <div class="navbar">
-      <div class="nav-title">Scrapping Produk</div>
-      <div class="user-area">
-        <div class="greeting">Hi, Welda!</div>
-        <div class="avatar">
-          <img src="/assets/img/profil.jpg" alt="Profil" />
-        </div>
-        <div class="dropdown">
-          <div class="dropdown-toggle" onclick="toggleDropdown()">
-            <i class="fa-solid fa-chevron-down chevron-icon"></i>
-          </div>
-          <div class="dropdown-menu" id="dropdownMenu">
-            <a href="#">Ubah Kata Sandi</a>
-            <a href="#" onclick="konfirmasiLogout()" class="logout-link">Logout</a>
-          </div>
-        </div>
+  <div class="navbar">
+    <div class="nav-title">Rekomendasi Produk</div>
+
+    <div class="user-area">
+      <!-- Hi, Welda dan avatar saja -->
+      <div class="greetingg">Hi, Welda!</div>
+      <div class="avatar">
+        <img src="/assets/img/profil.jpg" alt="Profil" />
       </div>
-    </div> 
-
-    <div class="container-etalase">
-  <h2>Manajemen Etalase</h2>
-
-  <div class="etalase-actions">
-    <button class="btn btn-tambah">+ Tambah Etalase</button>
+    </div>
+  </div>
+  <!-- Akun Cards -->
+<div class="rekomendasi-etalase">
+  <div class="etalase-header">
+    <h2></h2>
+    <button class="btn-tambah-akun" onclick="openModal()">
+  <i class="fa-solid fa-circle-plus"></i> Tambah Akun
+</button>
   </div>
 
-  <div class="etalase-list">
-    <div class="etalase-item">
-      <span class="etalase-nama">Elektronik</span>
-      <div class="etalase-buttons">
-        <button class="btn-edit">Edit</button>
-        <button class="btn-hapus">Hapus</button>
+  <div class="akun-grid">
+    <!-- Contoh akun 1 -->
+    <div class="akun-card">
+      <div class="akun-header">
+        <div class="akun-number">1</div>
+        <div class="akun-info-center">
+          <p class="akun-nama">@akun1_shopee</p>
+          <p class="akun-studio">Studio 2</p>
+        </div>
+      </div>
+      <div class="akun-stats">
+        <div><h3>100</h3><p>Produk</p></div>
+        <div><h3>7</h3><p>Kategori</p></div>
+      </div>
+      <div class="akun-btns">
+        <button class="btn-atur"><i class="fa-solid fa-gear"></i> Atur Kategori</button>
+        <button class="btn-lihat"><i class="fa-solid fa-cart-shopping"></i> Lihat Semua Produk</button>
       </div>
     </div>
 
-    <div class="etalase-item">
-      <span class="etalase-nama">Fashion</span>
-      <div class="etalase-buttons">
-        <button class="btn-edit">Edit</button>
-        <button class="btn-hapus">Hapus</button>
-      </div>
-    </div>
+    <!-- Tambahkan akun-card lainnya jika perlu -->
+  </div>
 
-    <!-- Tambahkan etalase lain di sini -->
+  <!-- Pagination bawah -->
+  <div class="pagination">
+    <button><i class="fa-solid fa-angle-left"></i></button>
+    <button class="active">1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <button><i class="fa-solid fa-ellipsis"></i></button>
+    <button><i class="fa-solid fa-angle-right"></i></button>
   </div>
 </div>
+
+<!-- Modal Tambah Akun -->
+<!-- Modal Tambah Akun -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <div class="modal-close" onclick="closeModal()">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <div class="modal-icon">
+      <i class="fa-solid fa-user-plus"></i>
+    </div>
+    <h3>Tambah Akun Baru</h3>
+    <p>Lengkapi Formulir Ini !</p>
+    <div class="modal-form">
+      <div class="input-group">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" placeholder="Masukkan Nama Akun" />
+      </div>
+      <div class="input-group">
+        <i class="fa-solid fa-building"></i>
+        <select>
+          <option disabled selected>Pilih Studio</option>
+          <option>Studio 1</option>
+          <option>Studio 2</option>
+          <option>Studio 3</option>
+        </select>
+      </div>
+      <button class="btn-modal-submit">Tambah Akun</button>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript Modal -->
+<script>
+  function openModal() {
+    document.getElementById('modal').classList.add('show');
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('show');
+  }
+
+  // Menutup modal jika klik di luar kotak modal
+  window.onclick = function (event) {
+    const modal = document.getElementById('modal');
+    if (event.target === modal) {
+      closeModal();
+    }
+  };
+</script>
