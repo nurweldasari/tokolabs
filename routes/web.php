@@ -37,4 +37,9 @@ Route::get('/detail', function () {
     return view('detail');
 });
 
+Route::get('/kategori', function () {
+    return view('kategori');
+});
+
+
 Route::post('/ubah_password', [AuthController::class, 'updatePassword'])->middleware('auth');
