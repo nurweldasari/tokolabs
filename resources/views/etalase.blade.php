@@ -69,9 +69,9 @@
           <p class="akun-studio">Studio 2</p>
         </div>
         <div class="akun-dropdown">
-          <span class="more-icon" onclick="toggleDropdown(this)">⋮</span>
-          <div class="dropdown-menu">
-            <button onclick="editAkun()">
+  <span class="more-icon" onclick="toggleDropdown(this)">⋮</span>
+  <div class="dropdown-menu">
+    <button onclick="editAkun(this)">
       <span class="dropdown-icon"><i class="fa-solid fa-pen-to-square"></i></span>
       <span>Edit</span>
     </button>
@@ -79,11 +79,10 @@
       <span class="dropdown-icon"><i class="fa-solid fa-trash-can"></i></span>
       <span>Hapus</span>
     </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  </div>
+</div>
+  </div>
+</div>
 
       <div class="akun-stats">
         <div><h3>100</h3><p>Produk</p></div>
@@ -111,290 +110,10 @@
         <div class="akun-dropdown">
           <span class="more-icon" onclick="toggleDropdown(this)">⋮</span>
           <div class="dropdown-menu">
-            <button onclick="editAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-pen-to-square"></i></span>
-      <span>Edit</span>
-    </button>
-    <button onclick="hapusAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-trash-can"></i></span>
-      <span>Hapus</span>
-    </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-      <div class="akun-stats">
-        <div><h3>100</h3><p>Produk</p></div>
-        <div><h3>7</h3><p>Kategori</p></div>
-      </div>
-
-      <div class="akun-btns">
-        <a href="kategori" class="btn-atur">
-          <i class="fa-solid fa-gear"></i> Atur Kategori
-        </a>
-        <a href="produk" class="btn-lihat">
-          <i class="fa-solid fa-cart-shopping"></i> Lihat Semua Produk
-        </a>
-      </div>
-    </div>
-    <div class="akun-card">
-    <div class="card-overlay"></div>
-    <div class="akun-header">
-      <div class="akun-number">1</div>
-      <div class="akun-info-center">
-        <div class="akun-info-wrapper">
-          <p class="akun-nama">@akun1_shopee</p>
-          <p class="akun-studio">Studio 2</p>
-        </div>
-        <div class="akun-dropdown">
-          <span class="more-icon" onclick="toggleDropdown(this)">⋮</span>
-          <div class="dropdown-menu">
-            <button onclick="editAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-pen-to-square"></i></span>
-      <span>Edit</span>
-    </button>
-    <button onclick="hapusAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-trash-can"></i></span>
-      <span>Hapus</span>
-    </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-      <div class="akun-stats">
-        <div><h3>100</h3><p>Produk</p></div>
-        <div><h3>7</h3><p>Kategori</p></div>
-      </div>
-
-      <div class="akun-btns">
-        <a href="kategori" class="btn-atur">
-          <i class="fa-solid fa-gear"></i> Atur Kategori
-        </a>
-        <a href="produk" class="btn-lihat">
-          <i class="fa-solid fa-cart-shopping"></i> Lihat Semua Produk
-        </a>
-      </div>
-    </div>
-    <div class="akun-card">
-    <div class="card-overlay"></div>
-    <div class="akun-header">
-      <div class="akun-number">1</div>
-      <div class="akun-info-center">
-        <div class="akun-info-wrapper">
-          <p class="akun-nama">@akun1_shopee</p>
-          <p class="akun-studio">Studio 2</p>
-        </div>
-        <div class="akun-dropdown">
-          <span class="more-icon" onclick="toggleDropdown(this)">⋮</span>
-          <div class="dropdown-menu">
-            <button onclick="editAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-pen-to-square"></i></span>
-      <span>Edit</span>
-    </button>
-    <button onclick="hapusAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-trash-can"></i></span>
-      <span>Hapus</span>
-    </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-      <div class="akun-stats">
-        <div><h3>100</h3><p>Produk</p></div>
-        <div><h3>7</h3><p>Kategori</p></div>
-      </div>
-
-      <div class="akun-btns">
-        <a href="kategori" class="btn-atur">
-          <i class="fa-solid fa-gear"></i> Atur Kategori
-        </a>
-        <a href="produk" class="btn-lihat">
-          <i class="fa-solid fa-cart-shopping"></i> Lihat Semua Produk
-        </a>
-      </div>
-    </div>
-    <div class="akun-card">
-    <div class="card-overlay"></div>
-    <div class="akun-header">
-      <div class="akun-number">1</div>
-      <div class="akun-info-center">
-        <div class="akun-info-wrapper">
-          <p class="akun-nama">@akun1_shopee</p>
-          <p class="akun-studio">Studio 2</p>
-        </div>
-        <div class="akun-dropdown">
-          <span class="more-icon" onclick="toggleDropdown(this)">⋮</span>
-          <div class="dropdown-menu">
-            <button onclick="editAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-pen-to-square"></i></span>
-      <span>Edit</span>
-    </button>
-    <button onclick="hapusAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-trash-can"></i></span>
-      <span>Hapus</span>
-    </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-      <div class="akun-stats">
-        <div><h3>100</h3><p>Produk</p></div>
-        <div><h3>7</h3><p>Kategori</p></div>
-      </div>
-
-      <div class="akun-btns">
-        <a href="kategori" class="btn-atur">
-          <i class="fa-solid fa-gear"></i> Atur Kategori
-        </a>
-        <a href="produk" class="btn-lihat">
-          <i class="fa-solid fa-cart-shopping"></i> Lihat Semua Produk
-        </a>
-      </div>
-    </div>
-    <div class="akun-card">
-    <div class="card-overlay"></div>
-    <div class="akun-header">
-      <div class="akun-number">1</div>
-      <div class="akun-info-center">
-        <div class="akun-info-wrapper">
-          <p class="akun-nama">@akun1_shopee</p>
-          <p class="akun-studio">Studio 2</p>
-        </div>
-        <div class="akun-dropdown">
-          <span class="more-icon" onclick="toggleDropdown(this)">⋮</span>
-          <div class="dropdown-menu">
-            <button onclick="editAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-pen-to-square"></i></span>
-      <span>Edit</span>
-    </button>
-    <button onclick="hapusAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-trash-can"></i></span>
-      <span>Hapus</span>
-    </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-      <div class="akun-stats">
-        <div><h3>100</h3><p>Produk</p></div>
-        <div><h3>7</h3><p>Kategori</p></div>
-      </div>
-
-      <div class="akun-btns">
-        <a href="kategori" class="btn-atur">
-          <i class="fa-solid fa-gear"></i> Atur Kategori
-        </a>
-        <a href="produk" class="btn-lihat">
-          <i class="fa-solid fa-cart-shopping"></i> Lihat Semua Produk
-        </a>
-      </div>
-    </div>
-    <div class="akun-card">
-    <div class="card-overlay"></div>
-    <div class="akun-header">
-      <div class="akun-number">1</div>
-      <div class="akun-info-center">
-        <div class="akun-info-wrapper">
-          <p class="akun-nama">@akun1_shopee</p>
-          <p class="akun-studio">Studio 2</p>
-        </div>
-        <div class="akun-dropdown">
-          <span class="more-icon" onclick="toggleDropdown(this)">⋮</span>
-          <div class="dropdown-menu">
-            <button onclick="editAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-pen-to-square"></i></span>
-      <span>Edit</span>
-    </button>
-    <button onclick="hapusAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-trash-can"></i></span>
-      <span>Hapus</span>
-    </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-      <div class="akun-stats">
-        <div><h3>100</h3><p>Produk</p></div>
-        <div><h3>7</h3><p>Kategori</p></div>
-      </div>
-
-      <div class="akun-btns">
-        <a href="kategori" class="btn-atur">
-          <i class="fa-solid fa-gear"></i> Atur Kategori
-        </a>
-        <a href="produk" class="btn-lihat">
-          <i class="fa-solid fa-cart-shopping"></i> Lihat Semua Produk
-        </a>
-      </div>
-    </div>
-    <div class="akun-card">
-    <div class="card-overlay"></div>
-    <div class="akun-header">
-      <div class="akun-number">1</div>
-      <div class="akun-info-center">
-        <div class="akun-info-wrapper">
-          <p class="akun-nama">@akun1_shopee</p>
-          <p class="akun-studio">Studio 2</p>
-        </div>
-        <div class="akun-dropdown">
-          <span class="more-icon" onclick="toggleDropdown(this)">⋮</span>
-          <div class="dropdown-menu">
-            <button onclick="editAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-pen-to-square"></i></span>
-      <span>Edit</span>
-    </button>
-    <button onclick="hapusAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-trash-can"></i></span>
-      <span>Hapus</span>
-    </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-      <div class="akun-stats">
-        <div><h3>100</h3><p>Produk</p></div>
-        <div><h3>7</h3><p>Kategori</p></div>
-      </div>
-
-      <div class="akun-btns">
-        <a href="kategori" class="btn-atur">
-          <i class="fa-solid fa-gear"></i> Atur Kategori
-        </a>
-        <a href="produk" class="btn-lihat">
-          <i class="fa-solid fa-cart-shopping"></i> Lihat Semua Produk
-        </a>
-      </div>
-    </div>
-    <div class="akun-card">
-    <div class="card-overlay"></div>
-    <div class="akun-header">
-      <div class="akun-number">1</div>
-      <div class="akun-info-center">
-        <div class="akun-info-wrapper">
-          <p class="akun-nama">@akun1_shopee</p>
-          <p class="akun-studio">Studio 2</p>
-        </div>
-        <div class="akun-dropdown">
-          <span class="more-icon" onclick="toggleDropdown(this)">⋮</span>
-          <div class="dropdown-menu">
-            <button onclick="editAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-pen-to-square"></i></span>
-      <span>Edit</span>
-    </button>
+            <button onclick="editAkun(this)">
+  <span class="dropdown-icon"><i class="fa-solid fa-pen-to-square"></i></span>
+  <span>Edit</span>
+</button>
     <button onclick="hapusAkun()">
       <span class="dropdown-icon"><i class="fa-solid fa-trash-can"></i></span>
       <span>Hapus</span>
@@ -422,28 +141,29 @@
     
 <div class="akun-card">
   <div class="card-overlay"></div>
-    <div class="akun-header">
-      <div class="akun-number">2</div>
-      <div class="akun-info-center">
-        <div class="akun-info-wrapper">
-          <p class="akun-nama">@akun2_shopee</p>
-          <p class="akun-studio">Studio 2</p>
-        </div>
-        <div class="akun-dropdown">
-          <span class="more-icon" onclick="toggleDropdown(this)">⋮</span>
-          <div class="dropdown-menu">
-            <button onclick="editAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-pen-to-square"></i></span>
-      <span>Edit</span>
-    </button>
-    <button onclick="hapusAkun()">
-      <span class="dropdown-icon"><i class="fa-solid fa-trash-can"></i></span>
-      <span>Hapus</span>
-    </button>
-          </div>
+  <div class="akun-header">
+    <div class="akun-number">2</div>
+    <div class="akun-info-center">
+      <div class="akun-info-wrapper">
+        <p class="akun-nama">@akun2_shopee</p>
+        <p class="akun-studio">Studio 2</p>
+      </div>
+      <div class="akun-dropdown">
+        <span class="more-icon" onclick="toggleDropdown(this)">⋮</span>
+        <div class="dropdown-menu">
+          <button onclick="editAkun(this)">
+            <span class="dropdown-icon"><i class="fa-solid fa-pen-to-square"></i></span>
+            <span>Edit</span>
+          </button>
+          <button onclick="hapusAkun(this)">
+            <span class="dropdown-icon"><i class="fa-solid fa-trash-can"></i></span>
+            <span>Hapus</span>
+          </button>
         </div>
       </div>
     </div>
+  </div>
+
 
 
       <div class="akun-stats">
@@ -495,7 +215,103 @@
   </div>
 </div>
 
+<!-- Modal Edit Akun -->
+<!-- Modal Edit Akun -->
+<div class="edit-modal-overlay" id="editModal">
+  <div class="edit-modal">
+    
+    <!-- Ikon lingkaran atas -->
+    <div class="modal-icon-circle">
+      <i class="fa-solid fa-user-pen"></i>
+    </div>
+
+    <h3>Edit Akun</h3>
+    <p>Perbarui informasi akun</p>
+
+    <form action="/akun/update" method="POST">
+      
+      <!-- Input Nama Akun dengan ikon -->
+      <div class="form-group">
+        <span class="input-icon"><i class="fa-solid fa-user"></i></span>
+        <input
+          type="text"
+          id="edit-nama-akun"
+          name="nama_akun"
+          placeholder="Masukkan Nama Akun"
+          required
+        >
+      </div>
+
+      <!-- Dropdown Studio dengan ikon -->
+      <div class="form-group">
+        <span class="input-icon"><i class="fa-solid fa-building"></i></span>
+        <select id="edit-studio" name="studio_id" required>
+          <option value="">-- Pilih Studio --</option>
+          <option value="1">Studio 1</option>
+          <option value="2">Studio 2</option>
+          <option value="3">Studio 3</option>
+        </select>
+      </div>
+
+      <!-- Tombol Simpan -->
+      <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+    </form>
+
+    <!-- Tombol tutup -->
+    <button class="btn-close" onclick="closeEditModal()">×</button>
+
+  </div>
+</div>
+
+
+
 <!-- JavaScript Modal -->
+ <script>
+  function editAkun(button) {
+    const card = button.closest('.akun-card');
+    const namaAkun = card.querySelector('.akun-nama')?.textContent.trim();
+    const studioText = card.querySelector('.akun-studio')?.textContent.trim();
+    const studioId = studioText?.match(/\d+/)?.[0] || '';
+
+    document.getElementById('edit-nama-akun').value = namaAkun || '';
+    document.getElementById('edit-studio').value = studioId || '';
+
+    openEditModal(); // Panggil open modal, dia akan tutup semua dropdown juga
+  }
+
+  function openEditModal() {
+    document.getElementById('editModal').style.display = 'flex';
+    closeAllDropdown(); // Pastikan semua dropdown tertutup
+  }
+
+  function closeEditModal() {
+    document.getElementById('editModal').style.display = 'none';
+  }
+
+  function toggleDropdown(element) {
+    const dropdown = element.closest('.akun-dropdown')?.querySelector('.dropdown-menu');
+    if (!dropdown) return;
+
+    closeAllDropdown();
+    dropdown.classList.toggle('show');
+  }
+
+  function closeAllDropdown() {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+      menu.classList.remove('show');
+      menu.style.display = 'none'; // opsional paksa tutup kalau pakai inline display
+    });
+  }
+
+  window.addEventListener('click', function (event) {
+    if (!event.target.closest('.akun-dropdown')) {
+      closeAllDropdown();
+    }
+  });
+</script>
+
+
+
 <script>
   function openModal() {
     document.getElementById('modal').classList.add('show');
@@ -506,12 +322,14 @@
   }
 
   // Menutup modal jika klik di luar kotak modal
-  window.onclick = function (event) {
-    const modal = document.getElementById('modal');
-    if (event.target === modal) {
-      closeModal();
-    }
-  };
+  window.addEventListener('click', function(e) {
+  if (!e.target.closest('.akun-dropdown')) {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+      menu.classList.remove('show');
+    });
+  }
+});
+
 </script>
 <script>
   function konfirmasiLogout() {
@@ -529,26 +347,37 @@
   });
 </script>
 <script>
-function toggleDropdown(el) {
-  const menu = el.nextElementSibling;
-  const card = el.closest('.akun-card');
+  function toggleDropdown(trigger) {
+    const dropdown = trigger.nextElementSibling;
+    const allDropdowns = document.querySelectorAll('.dropdown-menu');
 
-  // Tutup semua dropdown lainnya dulu
-  document.querySelectorAll('.dropdown-menu').forEach(d => d.style.display = 'none');
-  document.querySelectorAll('.akun-card').forEach(c => c.classList.remove('overlay'));
+    // Tutup semua dropdown lain
+    allDropdowns.forEach(d => {
+      if (d !== dropdown) d.style.display = 'none';
+    });
 
-  // Toggle dropdown saat ini
-  if (menu.style.display === 'block') {
-    menu.style.display = 'none';
-    card.classList.remove('overlay');
-  } else {
-    menu.style.display = 'block';
-    card.classList.add('overlay');
+    // Toggle dropdown sekarang
+    if (dropdown.style.display === 'block') {
+      dropdown.style.display = 'none';
+    } else {
+      dropdown.style.display = 'block';
+    }
   }
-}
 
+  // Tutup dropdown jika klik di luar
+  document.addEventListener('click', function(event) {
+    const isClickOnTrigger = event.target.closest('.more-icon');
+    const isClickInsideDropdown = event.target.closest('.dropdown-menu');
 
+    if (!isClickOnTrigger && !isClickInsideDropdown) {
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        menu.style.display = 'none';
+      });
+    }
+  });
 </script>
+
+
 <script>
   const akunGrid = document.getElementById("akunGrid");
   const akunCards = Array.from(akunGrid.getElementsByClassName("akun-card"));

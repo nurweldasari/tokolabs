@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Data Produk - TokoLabs</title>
+  <title>Detail Produk - TokoLabs</title>
   <link rel="stylesheet" href="{{ asset('assets/css/detail.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -10,48 +10,42 @@
   <div class="container">
     <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
+  <div class="menu-container">
     <div class="logo">
-  <div class="brand">
-    <i class="fa-solid fa-shop"></i>
-    <span class="brand-text">TokoLabs</span>
-  </div>
-  <div class="bars-wrapper" id="toggleSidebar">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-</div>
+      <div class="brand">
+        <i class="fa-solid fa-shop"></i>
+        <span class="brand-text">TokoLabs</span>
+      </div>
+      <div class="bars-wrapper" id="toggleSidebar">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
     <ul>
       <li><a href="dashboard"><i class="fa-solid fa-gauge-high"></i> <span class="menu-text">Dashboard</span></a></li>
-      <li class="produk active"><a href="#"><i class="fa-solid fa-cart-shopping"></i> <span class="menu-text">Produk</span></a></li>
+      <li class="etalase active"><a href="#"><i class="fa-solid fa-cart-shopping"></i> <span class="menu-text">Rekomendasi Produk</span></a></li>
       <li><a href="schedule"><i class="fa-solid fa-calendar-days"></i> <span class="menu-text">Scheduler</span></a></li>
-      <li><a href="etalase"><i class="fa-solid fa-user-gear"></i> <span class="menu-text">Manajemen & Etalase</span></a></li>
+      <li><a href="akun"><i class="fa-solid fa-gear"></i> <span class="menu-text">Pengaturan Akun</span></a></li>
     </ul>
-  </aside>
+  </div>
 
-    <!-- Main Content -->
-<div class="main-content" id="mainContent">
+  <div class="logout-wrapper">
+    <a href="#" onclick="konfirmasiLogout()" class="logout-btn">
+  <i class="fa-solid fa-right-from-bracket"></i>
+  <span class="logout-text">Keluar</span>
+</a>
+  </div>
+</aside>
+
+  <!-- Main Content -->
+  <div class="main-content" id="mainContent">
   <div class="navbar">
-    <div class="nav-title">Dashboard</div>
+    <div class="nav-title">Rekomendasi Produk</div>
 
     <div class="user-area">
-      <!-- Hi, Welda dan avatar -->
-      <div class="greeting">Hi, Welda!</div>
+      <!-- Hi, Welda dan avatar saja -->
+      <div class="greetingg">Hi, Welda!</div>
       <div class="avatar">
         <img src="/assets/img/profil.jpg" alt="Profil" />
-      </div>
-
-      <!-- Dropdown -->
-      <div class="dropdown">
-        <div class="dropdown-toggle" onclick="toggleDropdown()">
-          <i class="fa-solid fa-chevron-down chevron-icon"></i>
-        </div>
-        <div class="dropdown-menu" id="dropdownMenu">
-          <a href="akun">
-            <i class="fa-solid fa-gear"></i> Pengaturan Akun
-          </a>
-          <a href="#" onclick="konfirmasiLogout()" class="logout-link">
-            <i class="fa-solid fa-right-from-bracket"></i> Logout
-          </a>
-        </div>
       </div>
     </div>
   </div>

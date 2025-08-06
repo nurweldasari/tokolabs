@@ -33,6 +33,10 @@ body {
   font-size: 13px;
   transition: width 0.3s ease;
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .sidebar.collapsed {
@@ -118,25 +122,37 @@ body {
   font-size: 15px;
 }
 
-.main-content {
-  margin-left: 240px;
-  width: calc(100% - 240px);
-  transition: margin-left 0.3s ease;
-}
-
-.main-content.expanded {
-  margin-left: 70px;
-  width: calc(100% - 70px);
-}
-
-.sidebar.collapsed .logo {
+.logout-wrapper {
+  display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
-.sidebar.collapsed .brand {
-  display: none;
+.logout-btn {
+  width: 180px;
+  padding: 10px 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff2e2e;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
+.logout-btn i {
+  margin-right: 6px;
+}
+
+.logout-btn:hover {
+  background-color: #cc1f1f;
+}
+
+.sidebar.collapsed .logout-text,
+.sidebar.collapsed .brand,
 .sidebar.collapsed .menu-text {
   display: none;
 }
@@ -153,18 +169,6 @@ body {
 .navbar {
   left: 240px;
   transition: left 0.3s ease;
-}
-
-.sidebar.collapsed ~ .main-content .navbar {
-  left: 70px;
-}
-
-.sidebar.collapsed + .main-content .navbar {
-  left: 70px;
-}
-
-/* Navbar */
-.navbar {
   height: 60px;
   background: #ffffff;
   display: flex;
@@ -173,14 +177,25 @@ body {
   padding: 0 30px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   position: fixed;
-  left: 240px;
   right: 0;
   top: 0;
   z-index: 999;
-  transition: left 0.3s ease;
 }
 
-.main-content.expanded ~ .navbar {
+.main-content {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+}
+
+.main-content.expanded ~ .navbar,
+.sidebar.collapsed ~ .main-content .navbar,
+.sidebar.collapsed + .main-content .navbar {
   left: 70px;
 }
 
@@ -201,7 +216,6 @@ body {
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
-  position: relative;
 }
 
 .avatar img {
@@ -210,55 +224,10 @@ body {
   object-fit: cover;
 }
 
-/* dropdown sandi dan logout */
-.dropdown {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.dropdown-toggle {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-}
-
-.chevron-icon {
-  font-size: 12px;
+.greetingg {
+  font-size: 14px;
   color: #333;
-}
-
-
-.dropdown-menu { 
-  display: none;
-position: absolute;
-top: 50px;
-right: 0;
-background-color: #fff;
-border-radius: 5px;
-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-padding: 10px;
-width: 160px; /* Lebih panjang */
-z-index: 1000;
-font-size: 13px;
-}
-
-.dropdown-menu a,
-.dropdown-menu button {
-  display: block;
-  padding: 8px;
-  text-decoration: none;
-  color: #333;
-  background: none;
-  border: none;
-  text-align: left;
-  width: 100%;
-}
-
-.dropdown-menu a:hover,
-.dropdown-menu button:hover {
-  background-color: #f0f0f0;
+  font-weight: 500;
 }
 
 .detail-wrapper {
