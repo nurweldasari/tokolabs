@@ -50,90 +50,59 @@
     </div>
   </div>
 
-<div class="schedule-wrapper">
-  <!-- Box Jadwal -->
+<div class="scheduler-wrapper">
+  <!-- Upload File Baru -->
+  <div class="card upload-card">
+    <div class="card-header">
+      <div class="icon-box">
+        <img src="https://img.icons8.com/fluency/36/upload-to-cloud.png" alt="upload icon">
+      </div>
+      <div class="card-title">Upload File Baru</div>
+    </div>
 
-  <!-- Box Terakhir Scraping -->
-  <div class="schedule-box">
-    <div class="icon-box green">
-      <i class="fa-solid fa-clock-rotate-left"></i>
+    <label class="label">Pilih Kategori</label>
+    <select id="kategori" class="kategori-select">
+      <option value="">--Pilih Kategori--</option>
+    </select>
+
+    <label class="label">Upload File CSV</label>
+    <div class="drop-zone" id="drop-zone">
+      <input type="file" id="fileInput" accept=".csv" hidden>
+      <div class="drop-inner">
+        <img class="cloud" src="https://img.icons8.com/ios/36/cloud-upload--v1.png" alt="cloud">
+        <div class="drop-main">Drag & drop file CSV di sini</div>
+        <div class="drop-sub">atau klik untuk memilih file</div>
+        <button type="button" class="btn-pilih" id="btnPilih">Pilih File</button>
+      </div>
     </div>
-    <div class="schedule-content">
-      <p class="label">Terakhir Scraping</p>
-      <p class="time" id="last-scraping">Kamis, 24 Juli 2025 Pukul 11:00</p>
-    </div>
+
+    <button class="btn-upload" id="btnUpload">Upload File CSV</button>
   </div>
 
-  <!-- Tombol Run Scraping -->
-  <button id="run-btn" class="btn-run">
-    <i class="fa-solid fa-play"></i> Run Scraping
-  </button>
+  <!-- Riwayat Upload -->
+  <div class="card riwayat-card">
+    <div class="card-header">
+      <div class="icon-box">
+        <img src="https://img.icons8.com/fluency/36/clock.png" alt="clock icon">
+      </div>
+      <div class="card-title">Riwayat Upload</div>
+      <div class="file-count" id="fileCount">0 file</div>
+    </div>
+
+    <div class="riwayat-empty" id="historyContent">
+      <img src="https://img.icons8.com/ios/40/document--v1.png" alt="no file">
+      <p>Belum ada file yang diupload</p>
+      <small>Upload file CSV pertama Anda untuk melihat riwayat</small>
+    </div>
+  </div>
 </div>
 
-<script>
-  
-  document.getElementById('run-btn').addEventListener('click', function () {
-  const btn = this;
-  const lastScraping = document.getElementById('last-scraping');
 
-  // Ubah tombol jadi loading
-  btn.disabled = true;
-  btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Sedang Berjalan...`;
+<script>document.getElementById('drop-zone').addEventListener('click', function() {
+  alert('Fitur pilih file CSV');
+});
 
-  // Ubah last scraping jadi status berjalan (warna hijau)
-  lastScraping.innerHTML = `<span class="status-berjalan">Sedang Berjalan...</span>`;
-
-  setTimeout(() => {
-    const now = new Date();
-    const hari = now.toLocaleDateString("id-ID", { weekday: "long" });
-    const tanggal = now.toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" });
-    const jam = now.toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit" });
-
-    lastScraping.textContent = `${hari}, ${tanggal} Pukul ${jam}`;
-    btn.disabled = false;
-    btn.innerHTML = `<i class="fa-solid fa-play"></i> Run Scraping`;
-  }, 4000);
+document.getElementById('upload-btn').addEventListener('click', function() {
+  alert('File CSV berhasil diupload!');
 });
 </script>
-<script>
-  // Toggle dropdown menu saat avatar diklik
-  function toggleDropdown() {
-    const menu = document.getElementById("dropdownMenu");
-    if (menu) {
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
-  }
-
-  // Konfirmasi logout
-  function konfirmasiLogout() {
-    const yakin = confirm("Apakah Anda yakin ingin logout?");
-    if (yakin) {
-      window.location.href = "/";
-    }
-  }
-
-  // Sembunyikan dropdown jika klik di luar
-  document.addEventListener("click", function (event) {
-    const dropdown = document.querySelector(".dropdown");
-    const menu = document.getElementById("dropdownMenu");
-    if (dropdown && menu && !dropdown.contains(event.target)) {
-      menu.style.display = "none";
-    }
-  });
-
-  // Toggle sidebar jika tombol tersedia
-  document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.getElementById("sidebar");
-    const mainContent = document.getElementById("mainContent");
-    const toggleBtn = document.getElementById("toggleSidebar");
-
-    if (sidebar && mainContent && toggleBtn) {
-      toggleBtn.addEventListener("click", function () {
-        sidebar.classList.toggle("collapsed");
-        mainContent.classList.toggle("expanded");
-      });
-    }
-  });
-</script>
-</body>
-</html>

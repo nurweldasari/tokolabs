@@ -57,17 +57,23 @@
 </div>
 
   <div class="kategori-wrapper">
-  <div class="kategori-saat-ini">
-    <h3>kategori saat ini</h3>
-  <div class="kategori-box">
-    <div class="left">
-      <img src="https://img.icons8.com/external-photo3ideastudio-flat-photo3ideastudio/64/external-makeup-supermarket-photo3ideastudio-flat-photo3ideastudio.png" alt="Perawatan & Kecantikan">
-      <span>Perawatan & Kecantikan</span>
-    </div>
-    <button class="hapus-btn">
-      <img src="https://cdn-icons-png.flaticon.com/128/484/484662.png" alt="hapus">
+  <div class="kategori-header">
+    <h3>Kategori saat ini</h3>
+    <button class="btn-simpan">
+      <i class="fa-solid fa-save"></i> Simpan
     </button>
   </div>
+
+  <div class="kategori-saat-ini">
+    <div class="kategori-box">
+      <div class="left">
+        <img src="https://img.icons8.com/external-photo3ideastudio-flat-photo3ideastudio/64/external-makeup-supermarket-photo3ideastudio-flat-photo3ideastudio.png" alt="Perawatan & Kecantikan">
+        <span>Perawatan & Kecantikan</span>
+      </div>
+      <button class="hapus-btn">
+        <img src="https://cdn-icons-png.flaticon.com/128/484/484662.png" alt="hapus">
+      </button>
+    </div>
 
   <div class="kategori-box">
     <div class="left">

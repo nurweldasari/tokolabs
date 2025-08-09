@@ -231,82 +231,132 @@ body {
 }
 
 
-.schedule-wrapper {
-  max-width: 500px;
-  background: #fff;
+.scheduler-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: white;
   border-radius: 12px;
   padding: 20px;
-  margin: 185px auto 30px; /* 120px dari atas agar tidak mepet navbar */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-
-.schedule-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid #ddd;
-  padding: 14px 18px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.icon-box {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 16px;
-  margin-right: 12px;
-}
-
-.green {
-  background-color: #00800033; 
-}
-
-.fa-clock-rotate-left {
-  color: #008000;
-}
-.schedule-content {
+.upload-card {
   flex: 1;
 }
 
-.label {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
+.riwayat-card {
+  width: 280px;
 }
 
-.btn-run {
-  margin-top: 18px;
-  width: 100%;
-  background-color: #5f63f2;
-  color: white;
-  border: none;
-  padding: 12px 0;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.btn-run:disabled {
-  opacity: 0.8;
-  background-color: #4e52d0;
-  cursor: not-allowed;
+.icon-box {
+  background: #EEF2FF;
+  border-radius: 10px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn-run:hover {
-  background-color: #4549d3;
-}
-
-/* Status berjalan hijau */
-.status-berjalan {
-  color: #4caf50;       /* Hanya teks hijau */
-  font-size: 13px;
+.card-title {
   font-weight: 600;
+  font-size: 16px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.kategori-select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.drop-zone {
+  border: 1px dashed #9ca3af;
+  border-radius: 8px;
+  padding: 18px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.drop-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cloud {
+  margin-bottom: 10px;
+}
+
+.drop-main {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.drop-sub {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.btn-pilih {
+  background: #4f46e5;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-upload {
+  background: #6b7280;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.file-count {
+  margin-left: auto;
+  font-size: 12px;
+  background: #f3f4f6;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.riwayat-empty {
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+.riwayat-empty p {
+  margin: 8px 0 4px;
+}
+
+.riwayat-empty small {
+  font-size: 12px;
+  color: #9ca3af;
 }
